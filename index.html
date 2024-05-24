@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntactical</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Toastr library for in-game notifications-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+ 
+    <!-- Animate.css library for board animations-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+</head>
+<style>
+    .centered-statement {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .guesses-remaining {
+        position: absolute;
+        top: 1000%; /* Adjust as needed */
+        left: 43%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .title {
+        position: absolute;
+        top: 7%; /* Adjust as needed */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+
+</style>
+<body>
+    <h1 class="title">
+        <span style="color: #ffffff;">S</span>
+        <span style="color: #ffffff;">y</span>
+        <span style="color: #ffffff;">n</span>
+        <span style="color: #ff6600;">T</span>
+        <span style="color: #ff00ff;">A</span>
+        <span style="color: #00ffff;">C</span>
+        <span style="color: #ffff00;">T</span>
+        <span style="color: #000000;">I</span>
+        <span style="color: #9900ff;">C</span>
+        <span style="color: #00ff66;">A</span>
+        <span style="color: #ff3300;">L</span>
+    </h1>
+    <div class="centered-statement">
+        <!-- <input type="text" id="textbox1"> -->
+        <div class="textbox-container">
+            <span class="inline-span">The</span>
+            <div class="textbox-wrapper">
+                <!-- <label for="textbox1">Noun 1:</label>-->
+                <input type="text" id="textbox1">
+            </div>
+            <div class="keyboard-cont" id="keyboard1-cont"> 
+                <!--<div id="keyboard1-cont" class="keyboard-cont"> -->
+                <div class="first-row">
+                    <button data-letter="Q" onclick="insertCharacter('Q')">Q</button>
+                    <button data-letter="W" onclick="insertCharacter('W')">W</button>
+                    <button data-letter="E" onclick="insertCharacter('E')">E</button>
+                    <button data-letter="R" onclick="insertCharacter('R')">R</button>
+                    <button data-letter="T" onclick="insertCharacter('T')">T</button>
+                    <button data-letter="Y" onclick="insertCharacter('Y')">Y</button>
+                    <button data-letter="U" onclick="insertCharacter('U')">U</button>
+                    <button data-letter="I" onclick="insertCharacter('I')">I</button>
+                    <button data-letter="O" onclick="insertCharacter('O')">O</button>
+                    <button data-letter="P" onclick="insertCharacter('P')">P</button>
+                </div>
+                <div class="second-row">
+                    <button data-letter="A" onclick="insertCharacter('A')">A</button>
+                    <button data-letter="S" onclick="insertCharacter('S')">S</button>
+                    <button data-letter="D" onclick="insertCharacter('D')">D</button>
+                    <button data-letter="F" onclick="insertCharacter('F')">F</button>
+                    <button data-letter="G" onclick="insertCharacter('G')">G</button>
+                    <button data-letter="H" onclick="insertCharacter('H')">H</button>
+                    <button data-letter="J" onclick="insertCharacter('J')">J</button>
+                    <button data-letter="K" onclick="insertCharacter('K')">K</button>
+                    <button data-letter="K" onclick="insertCharacter('L')">L</button>
+                </div>
+                <div class="third-row">
+                    <button data-letter="Z" onclick="insertCharacter('Z')">Z</button>
+                    <button data-letter="X" onclick="insertCharacter('X')">X</button>
+                    <button data-letter="C" onclick="insertCharacter('C')">C</button>
+                    <button data-letter="V" onclick="insertCharacter('V')">V</button>
+                    <button data-letter="B" onclick="insertCharacter('B')">B</button>
+                    <button data-letter="N" onclick="insertCharacter('N')">N</button>
+                    <button data-letter="M" onclick="insertCharacter('M')">M</button>
+                    <button data-letter="Del" onclick="deleteFunc1()">Del</button>
+                </div>
+            </div>
+
+            <span> ate the </span>
+            <div class="textbox-container">
+                <div class="textbox-wrapper">
+                    <!-- <label for="textbox2">Noun 2:</label> -->
+                    <input type="text" id="textbox2">
+                </div>
+                <div class="keyboard-cont" id="keyboard2-cont"> 
+                    <div class="first-row">
+                        <button data-letter="Q" onclick="insertCharacter2('Q')">Q</button>
+                        <button data-letter="W" onclick="insertCharacter2('W')">W</button>
+                        <button data-letter="E" onclick="insertCharacter2('E')">E</button>
+                        <button data-letter="R" onclick="insertCharacter2('R')">R</button>
+                        <button data-letter="T" onclick="insertCharacter2('T')">T</button>
+                        <button data-letter="Y" onclick="insertCharacter2('Y')">Y</button>
+                        <button data-letter="U" onclick="insertCharacter2('U')">U</button>
+                        <button data-letter="I" onclick="insertCharacter2('I')">I</button>
+                        <button data-letter="O" onclick="insertCharacter2('O')">O</button>
+                        <button data-letter="P" onclick="insertCharacter2('P')">P</button>
+                    </div>
+                    <div class="second-row">
+                        <button data-letter="A" onclick="insertCharacter2('A')">A</button>
+                        <button data-letter="S" onclick="insertCharacter2('S')">S</button>
+                        <button data-letter="D" onclick="insertCharacter2('D')">D</button>
+                        <button data-letter="F" onclick="insertCharacter2('F')">F</button>
+                        <button data-letter="G" onclick="insertCharacter2('G')">G</button>
+                        <button data-letter="H" onclick="insertCharacter2('H')">H</button>
+                        <button data-letter="J" onclick="insertCharacter2('J')">J</button>
+                        <button data-letter="K" onclick="insertCharacter2('K')">K</button>
+                        <button data-letter="K" onclick="insertCharacter2('L')">L</button>
+                    </div>
+                    <div class="third-row">
+                        <button data-letter="Z" onclick="insertCharacter2('Z')">Z</button>
+                        <button data-letter="X" onclick="insertCharacter2('X')">X</button>
+                        <button data-letter="C" onclick="insertCharacter2('C')">C</button>
+                        <button data-letter="V" onclick="insertCharacter2('V')">V</button>
+                        <button data-letter="B" onclick="insertCharacter2('B')">B</button>
+                        <button data-letter="N" onclick="insertCharacter2('N')">N</button>
+                        <button data-letter="M" onclick="insertCharacter2('M')">M</button>
+                        <button data-letter = "Del" onclick="deleteFunc2()">Del</button>
+                    </div>
+                </div>
+            </div>
+            <span> grass. </span>
+
+
+        <button id="enterButton">Enter</button>
+        <!-- <div id="sentenceDisplay">The [noun] ate the [noun].</div> -->
+        <div class="guesses-remaining">
+            <div id="guessesRemainingDisplay">Guesses Remaining: </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="adjective">
+        <span> (adjective) </span>
+    </div>
+
+    <div class = "noun">
+        <span> (noun)</span>
+    </div>
+
+
+    <script>
+         function deleteFunc1() {
+            var textbox = document.getElementById("textbox1"); // or textbox2 depending on the textbox you want to delete from
+            var textValue = textbox.value;
+            
+            if (textValue.length > 0) {
+                textbox.value = textValue.slice(0, -1);
+            }
+        }
+        function deleteFunc2() {
+            var textbox = document.getElementById("textbox2"); // or textbox2 depending on the textbox you want to delete from
+            var textValue = textbox.value;
+            
+            if (textValue.length > 0) {
+                textbox.value = textValue.slice(0, -1);
+            }
+        }
+    </script>
+
+</body>
+
+
+
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="script.js" type="module"></script>
+</html>
