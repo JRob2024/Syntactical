@@ -1,5 +1,5 @@
 
-export const WORDS = [
+export const FIVEWORDS = [
     'which',
     'there',
     'their',

@@ -1,4 +1,4 @@
-export const FOURWORDS = [
+ export const FOURWORDS = [
     'ABBA', 'ABBE', 'ABLE', 'ABLY', 'ACES', 'ACHE', 'ACID', 'ACME', 'ACNE', 'ACRE',
     'ACTA', 'ACTS', 'ACYL', 'ADDS', 'AERO', 'AFAR', 'AFRO', 'AGAR', 'AGED', 'AGER',
     'AGES', 'AIDA', 'AIDE', 'AIDS', 'AIMS', 'AIRS', 'AIRY', 'AJAR', 'AKIN', 'ALAN',

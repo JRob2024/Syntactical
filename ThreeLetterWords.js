@@ -1,4 +1,4 @@
-export const THREEWORDS = [
+ export const THREEWORDS = [
 'AAH',
 'AAL',
 'AAS',

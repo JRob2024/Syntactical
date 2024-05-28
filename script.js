@@ -1,4 +1,6 @@
-import { WORDS } from "./words.js";
+import { FIVEWORDS } from "./words.js";
+import { FOURWORDS } from "/FourLetterWords.js";
+import { THREEWORDS } from "./ThreeLetterWords.js";
 
 const NUMBER_OF_GUESSES = 5;
 let guessesRemaining = NUMBER_OF_GUESSES;
@@ -9,7 +11,7 @@ let guessesRemaining = NUMBER_OF_GUESSES;
 var enterButton = document.getElementById("enterButton");
 
 // Define the correct word
-var correctWord1 = "zebra";
+var correctWord1 = "lion";
 var correctWord2 = "green";
 
 // Get references to the textboxes and enter button
@@ -46,25 +48,35 @@ enterButton.addEventListener("click", function() {
     // Get the values from the textboxes
     var input1 = textbox1.value.toLowerCase();
     var input2 = textbox2.value.toLowerCase();
-    guessesRemaining = guessesRemaining - 1;
-    updateGuessesRemainingDisplay(); // Update the display of remaining guesses
+    
 
-    if (guessesRemaining === 0) {
-        toastr.error("Game over!")
-        disableAllControls();
-    } else if ((input1.length < 5 && input1.length != 0) || input1.length > 5){
-        toastr.error("Word 1 does not have 5 letters!")
+    if (input1.length < 3 && input1.length !== 0) {
+        toastr.error("Word 1 has too few letters!")
         return
-    } else if ((input2.length < 5 && input2.length != 0) || input2.length > 5){
-        toastr.error("Word 2 does not have 5 letters!")    
+    } else if (input1.length > 5) {
+        toastr.error("Word 1 has too many letters!")
+    } else if (input2.length < 3 && input2.length !== 0) {
+        toastr.error("Word 2 has too few letters!")    
         return
-    } else if (!WORDS.includes(input1) && input1.length != 0) {
-        toastr.error("Word 1 not in list!")
+    } else if (input2.length > 5) {
+        toastr.error("Word 2 has too many letters!")
         return
-    } else if (!WORDS.includes(input2) && input2.length != 0) {
-        toastr.error("Word 2 not in list!")
-        return   
+    } else if (input1.length !== 0 &&
+        !FIVEWORDS.includes(input1.toLowerCase()) &&
+        !FOURWORDS.map(word => word.toLowerCase()).includes(input1.toLowerCase()) &&
+        !THREEWORDS.map(word => word.toLowerCase()).includes(input1.toLowerCase())) {
+        toastr.error("Word 1 not in list!");
+        return;
+    } else if (input2.length !== 0 &&
+        !FIVEWORDS.includes(input2.toLowerCase()) &&
+        !FOURWORDS.map(word => word.toLowerCase()).includes(input2.toLowerCase()) &&
+        !THREEWORDS.map(word => word.toLowerCase()).includes(input2.toLowerCase())) {
+        toastr.error("Word 2 not in list!");
+        return;
     } else {
+        guessesRemaining = guessesRemaining - 1;
+        updateGuessesRemainingDisplay(); // Update the display of remaining guesses
+    
         // Compare each letter of the inputs with the corresponding letter of the correct word
         var isCorrect1 = compareInputs1(input1, correctWord1);
         //compareInputs11(input1, correctWord1);
@@ -79,12 +91,27 @@ enterButton.addEventListener("click", function() {
             disableAllControls();
             return
         } else if (isCorrect1) {
+            if (guessesRemaining === 0) {
+                toastr.error("Game over!")
+                disableAllControls();
+                return
+            }
             toastr.success("The first word is correct!")
             return
         } else if (isCorrect2) {
+            if (guessesRemaining === 0) {
+                toastr.error("Game over!")
+                disableAllControls();
+                return
+            }
             toastr.success("The second word is correct!")
             return
         } else {
+            if (guessesRemaining === 0) {
+                toastr.error("Game over!")
+                disableAllControls();
+                return
+            }
             toastr.error("Neither input is correct!")
             return
         }
