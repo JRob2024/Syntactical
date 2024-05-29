@@ -28,20 +28,49 @@
     
     .guesses-remaining {
         position: absolute;
-        top: 1000%; /* Adjust as needed */
-        left: 43%;
+        top: 1000%; /* Adjusted */
+        left: 43%; /* Adjusted */
         transform: translate(-50%, -50%);
     }
     
     .title {
         position: absolute;
-        top: 7%; /* Adjust as needed */
+        top: 5%; /* Adjusted */
         left: 50%;
         transform: translateX(-50%);
     }
-    
 
+    /* Adjustments for smaller screens */
+    @media (max-width: 768px) {
+        .centered-statement {
+            top: 40%; /* Adjusted */
+        }
+
+        .guesses-remaining {
+            top: 85%; /* Adjusted */
+        }
+
+        .title {
+            top: 2%; /* Adjusted */
+        }
+    }
+
+    /* Adjustments for even smaller screens */
+    @media (max-width: 576px) {
+        .centered-statement {
+            top: 50%; /* Adjusted */
+        }
+
+        .guesses-remaining {
+            top: 80%; /* Adjusted */
+        }
+
+        .title {
+            top: 1%; /* Adjusted */
+        }
+    }
 </style>
+
 <body>
     <h1 class="title">
         <span style="color: #ffffff;">S</span>
