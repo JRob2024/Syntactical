@@ -104,6 +104,7 @@ h1 {
 .textbox-container {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .textbox-container .textbox-wrapper {
@@ -111,7 +112,7 @@ h1 {
 }
 
 .textbox-container span {
-  margin-right: 0.5em; /* Adjust as needed */
+  margin-right: 1em; /* Adjust as needed */
 }
 
 .inline-span {
