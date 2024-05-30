@@ -40,14 +40,18 @@
         transform: translateX(-50%);
     }
 
-    /* Adjustments for smaller screens */
     @media (max-width: 768px) {
         .centered-statement {
             top: 40%;
+            left: 0; /* Ensure the statement starts from the left edge */
+            transform: translate(0, -50%);
+            padding-left: 10px; /* Add padding to ensure text is not touching the edge */
         }
 
         .guesses-remaining {
-            top: 150%; /* Adjusted */
+            top: 95%; /* Adjusted to move it lower on the screen */
+            left: 50%; /* Center it horizontally */
+            transform: translate(-50%, -50%);
         }
 
         .title {
@@ -55,27 +59,26 @@
         }
 
         .adjective {
-        font-size: 0.8em; /* Adjusted */
-        /* Add new positioning properties for (noun) and (adjective) */
-        position: absolute;
-        /* Adjust the top and left values to position them properly */
-        top: 350px;
-        left: calc(50% + 35px);
-    }
+            font-size: 0.8em; /* Adjusted */
+            position: absolute;
+            top: 350px;
+            left: calc(50% + 35px);
+        }
         .noun {
-        font-size: 0.8em; /* Adjusted */
-        /* Add new positioning properties for (noun) and (adjective) */
-        position: absolute;
-        /* Adjust the top and left values to position them properly */
-        top: 350px;
-        left: calc(50% - 35px);
-    }
+            font-size: 0.8em; /* Adjusted */
+            position: absolute;
+            top: 350px;
+            left: calc(50% - 35px);
+        }
     }
 
     /* Adjustments for even smaller screens */
     @media (max-width: 576px) {
         .centered-statement {
             top: 50%;
+            left: 0; /* Ensure the statement starts from the left edge */
+            transform: translate(0, -50%);
+            padding-left: 10px; /* Add padding to ensure text is not touching the edge */
         }
 
         .guesses-remaining {
@@ -90,6 +93,7 @@
             font-size: 0.7em; /* Adjusted */
         }
     }
+    
 </style>
 
 <body>
