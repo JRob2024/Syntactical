@@ -127,14 +127,14 @@ h1 {
 .adjective {
   position: absolute;
   top: 28.5%; /* Adjust as needed */
-  left: 54.5%; /* Adjust as needed */
+  left: 55%; /* Adjust as needed */
   transform: translate(-50%, -50%);
 }
 
 .noun {
   position: absolute;
   top: 28.5%; /* Adjust as needed */
-  left: 40.5%; /* Adjust as needed */
+  left: 40%; /* Adjust as needed */
   transform: translate(-50%, -50%);
 }
 
