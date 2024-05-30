@@ -107,16 +107,11 @@ h1 {
 }
 
 .textbox-container .textbox-wrapper {
-  margin-right: 10px; /* Adjust as needed */
-}
-
-.textbox-wrapper {
-  width: 150px; /* Adjust the width as needed */
-  /* Other existing styles */
+  margin-right: 1em; /* Adjust as needed */
 }
 
 .textbox-container span {
-  margin-right: 10px; /* Adjust as needed */
+  margin-right: 1em; /* Adjust as needed */
 }
 
 .inline-span {
@@ -132,14 +127,14 @@ h1 {
 .adjective {
   position: absolute;
   top: 28.5%; /* Adjust as needed */
-  left: 54.6%; /* Adjust as needed */
+  left: 55%; /* Adjust as needed */
   transform: translate(-50%, -50%);
 }
 
 .noun {
   position: absolute;
   top: 28.5%; /* Adjust as needed */
-  left: 40.5%; /* Adjust as needed */
+  left: 40%; /* Adjust as needed */
   transform: translate(-50%, -50%);
 }
 
