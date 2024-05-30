@@ -126,14 +126,16 @@ h1 {
 
 .adjective {
   position: absolute;
-  top: 220px; /* Adjust as needed */
-  left: 790px; /* Adjust as needed */
+  top: 28.5%; /* Adjust as needed */
+  left: 54.5%; /* Adjust as needed */
+  transform: translate(-50%, -50%);
 }
 
 .noun {
   position: absolute;
-  top: 220px; /* Adjust as needed */
-  left: 590px; /* Adjust as needed */
+  top: 28.5%; /* Adjust as needed */
+  left: 40.5%; /* Adjust as needed */
+  transform: translate(-50%, -50%);
 }
 
 .title {
