@@ -49,26 +49,28 @@
         }
 
         .guesses-remaining {
-            top: 95%; /* Adjusted to move it lower on the screen */
+            top: 1000%; /* Adjusted to move it lower on the screen */
             left: 50%; /* Center it horizontally */
             transform: translate(-50%, -50%);
         }
 
         .title {
             top: 2%;
+            font-size: 1.5em; /* Adjust the font size for smaller screens */
+            white-space: nowrap; /* Ensure the title doesn't break into multiple lines */
         }
 
         .adjective {
             font-size: 0.8em; /* Adjusted */
             position: absolute;
             top: 350px;
-            left: calc(50% + 35px);
+            left: calc(50% + 60px);
         }
         .noun {
             font-size: 0.8em; /* Adjusted */
             position: absolute;
             top: 350px;
-            left: calc(50% - 35px);
+            left: calc(50% - 60px);
         }
     }
 
@@ -93,7 +95,7 @@
             font-size: 0.7em; /* Adjusted */
         }
     }
-    
+
 </style>
 
 <body>
