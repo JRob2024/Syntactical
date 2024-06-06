@@ -1,6 +1,6 @@
-import { FIVEWORDS } from "./words.js";
-import { FOURWORDS } from "/FourLetterWords.js";
-import { THREEWORDS } from "./ThreeLetterWords.js";
+import { FIVEWORDS } from "./words.js"; //Five-letter words
+import { FOURWORDS } from "/FourLetterWords.js"; //Four-letter words
+import { THREEWORDS } from "./ThreeLetterWords.js"; //Three-letter words
 
 const NUMBER_OF_GUESSES = 5;
 let guessesRemaining = NUMBER_OF_GUESSES;
