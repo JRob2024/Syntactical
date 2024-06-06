@@ -96,7 +96,7 @@ h1 {
 }
 
 .grey {
-  background-color: grey; /* Change the background color to a shade of grey */
+  background-color: rgb(0, 0, 0); /* Change the background color to a shade of grey */
   color: black; /* Change the text color to a darker shade of grey */
   /* Add any additional styling as needed */
 }
