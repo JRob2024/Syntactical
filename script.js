@@ -11,7 +11,7 @@ let guessesRemaining = NUMBER_OF_GUESSES;
 var enterButton = document.getElementById("enterButton");
 
 // Define the correct word
-var correctWord1 = "lion";
+var correctWord1 = "zebra";
 var correctWord2 = "green";
 
 // Get references to the textboxes and enter button
